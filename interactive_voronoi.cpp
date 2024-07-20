@@ -70,7 +70,7 @@ private:
 
         // Dibuja todas las aristas del diagrama de Voronoi
         for (const auto& edge : vd.edges()) {
-            if (edge.is_infinite()) continue; //se ignoran las infinitas
+            if (edge.is_infinite()) continue; //se ignoran las infinitas (casos degenerados)
 
             const vertex_type* v0 = edge.vertex0(); 
             const vertex_type* v1 = edge.vertex1(); 
