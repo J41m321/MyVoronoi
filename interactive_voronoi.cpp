@@ -70,12 +70,11 @@ private:
 
         // Dibuja todas las aristas del diagrama de Voronoi
         for (const auto& edge : vd.edges()) {
-            if (edge.is_infinite()) continue; 
+            if (edge.is_infinite()) continue; //se ignoran las infinitas
 
             const vertex_type* v0 = edge.vertex0(); 
             const vertex_type* v1 = edge.vertex1(); 
 
-            
             sf::Vertex line[] = {
                 sf::Vertex(sf::Vector2f(v0->x(), v0->y()), sf::Color::Red),
                 sf::Vertex(sf::Vector2f(v1->x(), v1->y()), sf::Color::Red) 
